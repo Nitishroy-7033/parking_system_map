@@ -1,0 +1,22 @@
+# Use a base image with your Flutter version
+FROM ghcr.io/cirruslabs/flutter:3.29.2
+
+# Set Flutter environment variables
+ENV FLUTTER_ROOT=/flutter
+ENV PATH="$FLUTTER_ROOT/bin:$PATH"
+
+# Install dependencies
+RUN apt-get update && apt-get install -y git unzip curl && \
+    flutter doctor
+
+# Set working directory
+WORKDIR /app
+
+# Copy project files
+COPY . .
+
+# Fetch dependencies
+RUN flutter pub get
+
+# Default command to run Flutter
+CMD ["flutter", "--version"]
