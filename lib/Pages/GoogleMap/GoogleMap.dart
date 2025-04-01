@@ -18,7 +18,7 @@ class GoogleMapPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Completer<GoogleMapController> controller = Completer();
-    const LatLng center = LatLng(22.493864, 88.347684);
+    const LatLng center = LatLng(19.234124275328096, 72.9904723082163);
     ParkingController parkingController = Get.put(ParkingController());
     AuthController authController = Get.put(AuthController());
     Set<Marker> markers = {
@@ -28,7 +28,7 @@ class GoogleMapPage extends StatelessWidget {
         },
         visible: true,
         markerId: MarkerId('parking_1'),
-        position: LatLng(22.493864, 88.347684),
+        position: LatLng(19.23397259059652, 72.99061818831264),
       ),
       Marker(
         onTap: () {
@@ -36,7 +36,7 @@ class GoogleMapPage extends StatelessWidget {
         },
         visible: true,
         markerId: MarkerId('parking_2'),
-        position: LatLng(22.504672, 88.335627),
+        position: LatLng(19.234092810060442, 72.99188779284806),
       ),
       Marker(
         onTap: () {
@@ -44,7 +44,7 @@ class GoogleMapPage extends StatelessWidget {
         },
         visible: true,
         markerId: MarkerId('parking_3'),
-        position: LatLng(22.512919, 88.355896),
+        position: LatLng(19.232460684688114, 72.99110687670826),
       ),
       Marker(
         onTap: () {
@@ -52,13 +52,13 @@ class GoogleMapPage extends StatelessWidget {
         },
         visible: true,
         markerId: MarkerId('parking_4'),
-        position: LatLng(22.523067, 88.348681),
+        position: LatLng(19.236080934989168, 72.989329574354),
       ),
       Marker(
         onTap: () {},
         visible: true,
         markerId: MarkerId('parking_5'),
-        position: LatLng(22.524653, 88.364484),
+        position: LatLng(19.23547614578978, 72.99089937442352),
       ),
     };
     return Scaffold(
